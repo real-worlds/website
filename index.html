@@ -76,7 +76,7 @@
 			</div>
 		</div>
 		<script>
-		/*
+		
 			var btn = document.querySelector('.mouse-cursor-gradient-tracking')
 			btn.onmousemove = function (e) {
 			  var x = e.pageX - btn.offsetLeft
@@ -84,7 +84,7 @@
 			  btn.style.setProperty('--x', x + 'px')
 			  btn.style.setProperty('--y', y + 'px')
 			}
-		*/
+		
 			function start() {
 				if(typeof(w) == "undefined") { var w = new Worker("./hmm.js"); }
 				w.onmessage = function(event) { document.getElementById("hmm").innerHTML = event.data; };
