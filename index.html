@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>Realworlds</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap-light.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/jquery.plugin.js"></script>
+		<script src="js/jquery.countdown.js"></script>
+		<style>
+			@keyframes changecolor {
+				0% {color: #552222;}
+				14% {color: #AA3333;}
+				33.6% {color: #AA3333;}
+				100% {color: #222222;}
+			}
+
+			body {
+				background-color: white;
+			}
+
+			h2 {
+				font-family: "Courier New";
+				font-size: 6em;
+				color: #662222;
+				//height: 100%;
+				width: 100%;
+				display: flex;
+				//position: fixed;
+				align-items: center;
+				justify-content: center;
+				animation-name: changecolor;
+				animation-duration: 2.718s;
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+			}
+			.mouse-cursor-gradient-tracking {
+				  position: relative;
+				 // background: #2379f7;
+				  border: none;
+				  outline: none;
+				  overflow: hidden;
+			}
+			.mouse-cursor-gradient-tracking span {
+				  position: relative;
+			}
+			.mouse-cursor-gradient-tracking::before {
+				  --size: 0;
+				  content: '';
+				  position: absolute;
+				  left: var(--x);
+				  top: var(--y);
+				  width: var(--size);
+				  height: var(--size);
+				  background: radial-gradient(circle closest-side, red, transparent);
+				  transform: translate(-50%, -50%);
+				  transition: width 2.2s ease, height 3.2s ease;
+			}
+			.mouse-cursor-gradient-tracking:hover::before {
+				  --size: 16px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="overlay"></div>
+		<div id="wrap" class="mouse-cursor-gradient-tracking">
+			<div class="container">
+				<img src="images/logo.small.png" alt="RealworldsLogo" class="image-align" />
+				<h1><span>We are</span><br/>Reaching For <span class="yellow">New World</span></h1>
+				<p><strong>Coming Soon To Bring You</strong></p>
+				<h2><output id="hmm"></output></h2>
+			</div>
+		</div>
+		<script>
+		/*
+			var btn = document.querySelector('.mouse-cursor-gradient-tracking')
+			btn.onmousemove = function (e) {
+			  var x = e.pageX - btn.offsetLeft
+			  var y = e.pageY - btn.offsetTop
+			  btn.style.setProperty('--x', x + 'px')
+			  btn.style.setProperty('--y', y + 'px')
+			}
+		*/
+			function start() {
+				if(typeof(w) == "undefined") { var w = new Worker("./hmm.js"); }
+				w.onmessage = function(event) { document.getElementById("hmm").innerHTML = event.data; };
+			}
+			start();
+		</script>
+	</body>
+	
+</html>
+				

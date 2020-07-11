@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style>
+		
+			@keyframes changecolor {
+				0% {background-color: black;}
+				25% {background-color: 	#080907;}
+				100% {background-color: black;}
+			}
+			
+			body {
+				background-color: black;
+				animation-name: changecolor;
+				animation-duration: 1s;
+				animation-delay: 0s;
+				animation-iteration-count: infinite;
+			}
+			
+			h1 {
+				font-family: "Courier New";
+				font-size: 10em;
+				color: #AA2222;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				position: fixed;
+				align-items: center;
+				justify-content: center;
+			}
+
+		</style>
+		
+		<title>Realworlds</title>
+		
+	</head>
+
+	<body>
+
+		<h1><output id="result"></output></h1>
+
+		<script>
+
+			function start() {
+				if(typeof(w) == "undefined") { var w = new Worker("worker1.js"); }
+				w.onmessage = function(event) { document.getElementById("result").innerHTML = event.data; };
+			}
+
+
+			start();
+			
+		</script>
+
+	</body>
+</html>
