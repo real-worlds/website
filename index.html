@@ -6,70 +6,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-			
-		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
 		<title>Realworlds</title>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/bootstrap-light.css">
-		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/jquery.plugin.js"></script>
-		<script src="js/jquery.countdown.js"></script>
+
 		<style>
-			@keyframes changecolor {
-				0% {color: #552222;}
-				14% {color: #AA3333;}
-				33.6% {color: #AA3333;}
-				100% {color: #222222;}
-			}
-
-			body {
-				font-family: "Lato", sans-serif;
-				background-color: black;
-			}
-
-			h2 {
-				font-family: "Courier New";
-				font-size: 6em;
-				color: #662222;
-				/*height: 100%;*/
-				width: 100%;
-				display: flex;
-				/*position: fixed;*/
-				align-items: center;
-				justify-content: center;
-				animation-name: changecolor;
-				animation-duration: 2.718s;
-				animation-delay: 0s;
-				animation-iteration-count: infinite;
-			}
-			.mouse-cursor-gradient-tracking {
-				  position: relative;
-				 /* background: #2379f7;*/
-				  border: none;
-				  outline: none;
-				  overflow: hidden;
-			}
-			.mouse-cursor-gradient-tracking span {
-				  position: relative;
-			}
-			.mouse-cursor-gradient-tracking::before {
-				  --size: 0;
-				  content: '';
-				  position: absolute;
-				  left: var(--x);
-				  top: var(--y);
-				  width: var(--size);
-				  height: var(--size);
-				  background: radial-gradient(circle closest-side, red, transparent);
-				  transform: translate(-50%, -50%);
-				  transition: width 2.2s ease, height 3.2s ease;
-			}
-			.mouse-cursor-gradient-tracking:hover::before {
-				  --size: 16px;
-			}
+			body {font-family: "Lato", sans-serif; background-color: black; background:url(./images/bg.jpg) top center no-repeat #000;background-size: auto;}
+			@keyframes changecolor {0% {color: #552222;}	14% {color: #AA3333;}	33.6% {color: #AA3333;}	100% {color: #222222;}	}
+			h2 {	font-family: "Courier New";	color: #662222;		width: 100%;	display: flex;	align-items: center;
+			 justify-content: center;	animation-name: changecolor;	animation-duration: 2.718s;	animation-delay: 0s;	animation-iteration-count: infinite;			}
+			.mouse-cursor-gradient-tracking { position: relative; /* background: #2379f7;*/ border: none;  outline: none; overflow: hidden;	}
+			.mouse-cursor-gradient-tracking span {  position: relative;	}
+			.mouse-cursor-gradient-tracking::before { --size: 0;  content: ''; position: absolute; left: var(--x); top: var(--y); width: var(--size);
+					height: var(--size); background: radial-gradient(circle closest-side, red, transparent); transform: translate(-50%, -50%); transition: width 2.2s ease, height 3.2s ease;	}
+			.mouse-cursor-gradient-tracking:hover::before { --size: 16px; }
+			img { width: 60%; max-width: 80%;display: block;margin-left: auto;margin-right: auto;}
+			h1 {font-size: 2.5rem;}
+			h2 {font-size: 2.25rem;}
+			h3 {font-size: 2rem;}
+			h4 {font-size: 1.75rem;}
+			h5 {font-size: 1.5rem;}
+			h6 {font-size: 1.25rem;}
+			p {font-size: 1rem;}
+			@media (max-width: 480px) {html {font-size: 12px;}}
+			@media (min-width: 480px) {html {font-size: 13px;}}
+			@media (min-width: 768px) {html {font-size: 14px;}}
+			@media (min-width: 992px) {html {font-size: 15px;}}
+			@media (min-width: 1200px) {html {font-size: 16px;}}
 		</style>
 
 	</head>
@@ -83,40 +45,43 @@
 		<a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
 		<a href="teaser.html" class="w3-bar-item w3-button w3-padding-large">TEASER</a>
 		<!-- <a href="#heb" class="w3-bar-item w3-button w3-padding-large w3-hide-small">טיזר</a> -->
-		<a href="#contact-eng" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+		<a href="teaser.html#contact-eng" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
 		<a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-right"><i class="fa fa-search"></i></a>
 	</div>
 </div>
 
+
 <div style="max-width:2000px;margin-top:46px">
-		<!-- <div class="overlay"></div> -->
-		<div id="wrap" class="mouse-cursor-gradient-tracking">
-			<div class="container">
-				<img src="images/logo.small.png" alt="RealworldsLogo" class="image-align" />
-				<h1><span>We are</span><br/>Reaching For <span class="yellow">New World</span></h1>
-				<p><strong>Coming Soon</strong></p>
-				<h2><output id="hmm"></output></h2>
-			</div>
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+	<div id="wrap" class="mouse-cursor-gradient-tracking">
+		<div style="color: #fff">
+			<img src="images/logo.small.png" alt="RealworldsLogo"/>
+			<h1><span>We are</span><br/>Reaching For <span class="yellow">New World</span></h1>
+			<p><strong>Coming Soon</strong></p>
+			<h2><output id="hmm"></output></h2>
 		</div>
-		
 	</div>
-		<script>
-		
-			var btn = document.querySelector('.mouse-cursor-gradient-tracking')
-			btn.onmousemove = function (e) {
-			  var x = e.pageX - btn.offsetLeft
-			  var y = e.pageY - btn.offsetTop
-			  btn.style.setProperty('--x', x + 'px')
-			  btn.style.setProperty('--y', y + 'px')
-			}
-		
-			function start() {
-				if(typeof(w) == "undefined") { var w = new Worker("./hmm.js"); }
-				w.onmessage = function(event) { document.getElementById("hmm").innerHTML = event.data; };
-			}
-			start();
-		</script>
-	</body>
+</div>
+</div>
+
+
+<script>
+
+var btn = document.querySelector('.mouse-cursor-gradient-tracking')
+btn.onmousemove = function (e) {
+	var x = e.pageX - btn.offsetLeft
+	var y = e.pageY - btn.offsetTop
+	btn.style.setProperty('--x', x + 'px')
+	btn.style.setProperty('--y', y + 'px')
+}
+
+function start() {
+	if(typeof(w) == "undefined") { var w = new Worker("./hmm.js"); }
+	w.onmessage = function(event) { document.getElementById("hmm").innerHTML = event.data; };
+}
+start();
+</script>
+</body>
 	
 </html>
 				
