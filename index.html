@@ -1,7 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			
+		
 		<title>Realworlds</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/bootstrap-light.css">
@@ -18,6 +26,7 @@
 			}
 
 			body {
+				font-family: "Lato", sans-serif;
 				background-color: white;
 			}
 
@@ -25,10 +34,10 @@
 				font-family: "Courier New";
 				font-size: 6em;
 				color: #662222;
-				//height: 100%;
+				/*height: 100%;*/
 				width: 100%;
 				display: flex;
-				//position: fixed;
+				/*position: fixed;*/
 				align-items: center;
 				justify-content: center;
 				animation-name: changecolor;
@@ -38,7 +47,7 @@
 			}
 			.mouse-cursor-gradient-tracking {
 				  position: relative;
-				 // background: #2379f7;
+				 /* background: #2379f7;*/
 				  border: none;
 				  outline: none;
 				  overflow: hidden;
@@ -66,15 +75,39 @@
 	</head>
 
 	<body>
-		<div class="overlay"></div>
+		
+<!-- Navbar -->
+<div class="w3-top">
+	<div class="w3-bar w3-black w3-card">
+		<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+		<a href="teaser.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEASER</a>
+		<!-- <a href="#heb" class="w3-bar-item w3-button w3-padding-large w3-hide-small">טיזר</a> -->
+		<a href="teaser.html#contact-eng" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+		<a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+	</div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+	<a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+	<a href="teaser.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEASER</a>
+	<!-- <a href="#heb" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">עברית</a> -->
+	<a href="teaser.html#contact-eng" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+		<!-- <div class="overlay"></div> -->
 		<div id="wrap" class="mouse-cursor-gradient-tracking">
 			<div class="container">
 				<img src="images/logo.small.png" alt="RealworldsLogo" class="image-align" />
 				<h1><span>We are</span><br/>Reaching For <span class="yellow">New World</span></h1>
-				<p><strong>AGI is Coming Soon</strong></p>
+				<p><strong>Coming Soon</strong></p>
 				<h2><output id="hmm"></output></h2>
 			</div>
 		</div>
+		
+	</div>
 		<script>
 		
 			var btn = document.querySelector('.mouse-cursor-gradient-tracking')
